@@ -10,22 +10,30 @@ else:
 
 def serializedATN():
     return [
-        4,1,19,46,2,0,7,0,2,1,7,1,2,2,7,2,1,0,5,0,8,8,0,10,0,12,0,11,9,0,
-        1,0,1,0,1,1,1,1,1,1,1,1,1,1,3,1,20,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,
-        2,1,2,1,2,1,2,1,2,3,2,33,8,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,41,8,2,
-        10,2,12,2,44,9,2,1,2,0,1,4,3,0,2,4,0,2,1,0,7,10,2,0,5,6,11,11,51,
-        0,9,1,0,0,0,2,19,1,0,0,0,4,32,1,0,0,0,6,8,3,2,1,0,7,6,1,0,0,0,8,
-        11,1,0,0,0,9,7,1,0,0,0,9,10,1,0,0,0,10,12,1,0,0,0,11,9,1,0,0,0,12,
-        13,5,0,0,1,13,1,1,0,0,0,14,15,5,3,0,0,15,20,3,4,2,0,16,17,5,16,0,
-        0,17,18,5,4,0,0,18,20,3,4,2,0,19,14,1,0,0,0,19,16,1,0,0,0,20,3,1,
-        0,0,0,21,22,6,2,-1,0,22,23,5,12,0,0,23,33,3,4,2,6,24,25,5,1,0,0,
-        25,26,3,4,2,0,26,27,5,2,0,0,27,33,1,0,0,0,28,33,5,13,0,0,29,33,5,
-        14,0,0,30,33,5,15,0,0,31,33,5,16,0,0,32,21,1,0,0,0,32,24,1,0,0,0,
-        32,28,1,0,0,0,32,29,1,0,0,0,32,30,1,0,0,0,32,31,1,0,0,0,33,42,1,
-        0,0,0,34,35,10,8,0,0,35,36,7,0,0,0,36,41,3,4,2,9,37,38,10,7,0,0,
-        38,39,7,1,0,0,39,41,3,4,2,8,40,34,1,0,0,0,40,37,1,0,0,0,41,44,1,
-        0,0,0,42,40,1,0,0,0,42,43,1,0,0,0,43,5,1,0,0,0,44,42,1,0,0,0,5,9,
-        19,32,40,42
+        4,1,30,70,2,0,7,0,2,1,7,1,2,2,7,2,1,0,5,0,8,8,0,10,0,12,0,11,9,0,
+        1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,26,8,1,1,
+        1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,35,8,1,10,1,12,1,38,9,1,1,1,3,1,41,
+        8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,54,8,2,1,2,1,
+        2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,65,8,2,10,2,12,2,68,9,2,1,2,0,
+        1,4,3,0,2,4,0,3,1,0,18,21,2,0,16,17,22,22,1,0,12,15,81,0,9,1,0,0,
+        0,2,40,1,0,0,0,4,53,1,0,0,0,6,8,3,2,1,0,7,6,1,0,0,0,8,11,1,0,0,0,
+        9,7,1,0,0,0,9,10,1,0,0,0,10,12,1,0,0,0,11,9,1,0,0,0,12,13,5,0,0,
+        1,13,1,1,0,0,0,14,15,5,5,0,0,15,41,3,4,2,0,16,17,5,27,0,0,17,18,
+        5,6,0,0,18,41,3,4,2,0,19,20,5,7,0,0,20,21,3,4,2,0,21,22,5,8,0,0,
+        22,25,3,2,1,0,23,24,5,9,0,0,24,26,3,2,1,0,25,23,1,0,0,0,25,26,1,
+        0,0,0,26,41,1,0,0,0,27,28,5,10,0,0,28,29,3,4,2,0,29,30,5,11,0,0,
+        30,31,3,2,1,0,31,41,1,0,0,0,32,36,5,1,0,0,33,35,3,2,1,0,34,33,1,
+        0,0,0,35,38,1,0,0,0,36,34,1,0,0,0,36,37,1,0,0,0,37,39,1,0,0,0,38,
+        36,1,0,0,0,39,41,5,2,0,0,40,14,1,0,0,0,40,16,1,0,0,0,40,19,1,0,0,
+        0,40,27,1,0,0,0,40,32,1,0,0,0,41,3,1,0,0,0,42,43,6,2,-1,0,43,44,
+        5,23,0,0,44,54,3,4,2,6,45,46,5,3,0,0,46,47,3,4,2,0,47,48,5,4,0,0,
+        48,54,1,0,0,0,49,54,5,24,0,0,50,54,5,25,0,0,51,54,5,26,0,0,52,54,
+        5,27,0,0,53,42,1,0,0,0,53,45,1,0,0,0,53,49,1,0,0,0,53,50,1,0,0,0,
+        53,51,1,0,0,0,53,52,1,0,0,0,54,66,1,0,0,0,55,56,10,9,0,0,56,57,7,
+        0,0,0,57,65,3,4,2,10,58,59,10,8,0,0,59,60,7,1,0,0,60,65,3,4,2,9,
+        61,62,10,7,0,0,62,63,7,2,0,0,63,65,3,4,2,8,64,55,1,0,0,0,64,58,1,
+        0,0,0,64,61,1,0,0,0,65,68,1,0,0,0,66,64,1,0,0,0,66,67,1,0,0,0,67,
+        5,1,0,0,0,68,66,1,0,0,0,7,9,25,36,40,53,64,66
     ]
 
 class RaraLangParser ( Parser ):
@@ -38,14 +46,18 @@ class RaraLangParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'('", "')'", "'print'", "'<--'", "'+'", 
-                     "'-'", "'\\u00D7'", "'\\u00F7'", "'\\u229E'", "'\\u22A0'", 
-                     "'\\u2248'", "'\\u00B1'" ]
+    literalNames = [ "<INVALID>", "'{'", "'}'", "'('", "')'", "'print'", 
+                     "'<--'", "'if'", "'then'", "'else'", "'while'", "'do'", 
+                     "'=='", "'!='", "'<'", "'>'", "'+'", "'-'", "'\\u00D7'", 
+                     "'\\u00F7'", "'\\u229E'", "'\\u22A0'", "'\\u2248'", 
+                     "'\\u00B1'" ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "PRINT", "ASSIGN", 
-                      "PLUS", "MINUS", "TIMES", "DIVIDE", "MOD", "DPLS", 
-                      "AVG", "UNEG", "INT", "BASED_NUMBER", "STRING", "ID", 
-                      "NEWLINE", "COMMENT", "WS" ]
+    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "PRINT", "ASSIGN", "IF", "THEN", "ELSE", 
+                      "WHILE", "DO", "EQ", "NEQ", "LT", "GT", "PLUS", "MINUS", 
+                      "TIMES", "DIVIDE", "MOD", "DPLS", "AVG", "UNEG", "INT", 
+                      "BASED_NUMBER", "STRING", "ID", "NEWLINE", "COMMENT", 
+                      "WS" ]
 
     RULE_prog = 0
     RULE_stmt = 1
@@ -56,23 +68,34 @@ class RaraLangParser ( Parser ):
     EOF = Token.EOF
     T__0=1
     T__1=2
-    PRINT=3
-    ASSIGN=4
-    PLUS=5
-    MINUS=6
-    TIMES=7
-    DIVIDE=8
-    MOD=9
-    DPLS=10
-    AVG=11
-    UNEG=12
-    INT=13
-    BASED_NUMBER=14
-    STRING=15
-    ID=16
-    NEWLINE=17
-    COMMENT=18
-    WS=19
+    T__2=3
+    T__3=4
+    PRINT=5
+    ASSIGN=6
+    IF=7
+    THEN=8
+    ELSE=9
+    WHILE=10
+    DO=11
+    EQ=12
+    NEQ=13
+    LT=14
+    GT=15
+    PLUS=16
+    MINUS=17
+    TIMES=18
+    DIVIDE=19
+    MOD=20
+    DPLS=21
+    AVG=22
+    UNEG=23
+    INT=24
+    BASED_NUMBER=25
+    STRING=26
+    ID=27
+    NEWLINE=28
+    COMMENT=29
+    WS=30
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -130,7 +153,7 @@ class RaraLangParser ( Parser ):
             self.state = 9
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==3 or _la==16:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 134218914) != 0):
                 self.state = 6
                 self.stmt()
                 self.state = 11
@@ -192,6 +215,103 @@ class RaraLangParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class WhileStmtContext(StmtContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaraLangParser.StmtContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def WHILE(self):
+            return self.getToken(RaraLangParser.WHILE, 0)
+        def expr(self):
+            return self.getTypedRuleContext(RaraLangParser.ExprContext,0)
+
+        def DO(self):
+            return self.getToken(RaraLangParser.DO, 0)
+        def stmt(self):
+            return self.getTypedRuleContext(RaraLangParser.StmtContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWhileStmt" ):
+                listener.enterWhileStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWhileStmt" ):
+                listener.exitWhileStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhileStmt" ):
+                return visitor.visitWhileStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class IfStmtContext(StmtContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaraLangParser.StmtContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IF(self):
+            return self.getToken(RaraLangParser.IF, 0)
+        def expr(self):
+            return self.getTypedRuleContext(RaraLangParser.ExprContext,0)
+
+        def THEN(self):
+            return self.getToken(RaraLangParser.THEN, 0)
+        def stmt(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(RaraLangParser.StmtContext)
+            else:
+                return self.getTypedRuleContext(RaraLangParser.StmtContext,i)
+
+        def ELSE(self):
+            return self.getToken(RaraLangParser.ELSE, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIfStmt" ):
+                listener.enterIfStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIfStmt" ):
+                listener.exitIfStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStmt" ):
+                return visitor.visitIfStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class BlockStmtContext(StmtContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaraLangParser.StmtContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def stmt(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(RaraLangParser.StmtContext)
+            else:
+                return self.getTypedRuleContext(RaraLangParser.StmtContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBlockStmt" ):
+                listener.enterBlockStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBlockStmt" ):
+                listener.exitBlockStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockStmt" ):
+                return visitor.visitBlockStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class AssignStmtContext(StmtContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a RaraLangParser.StmtContext
@@ -226,11 +346,12 @@ class RaraLangParser ( Parser ):
 
         localctx = RaraLangParser.StmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_stmt)
+        self._la = 0 # Token type
         try:
-            self.state = 19
+            self.state = 40
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [3]:
+            if token in [5]:
                 localctx = RaraLangParser.PrintStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 14
@@ -238,7 +359,7 @@ class RaraLangParser ( Parser ):
                 self.state = 15
                 self.expr(0)
                 pass
-            elif token in [16]:
+            elif token in [27]:
                 localctx = RaraLangParser.AssignStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 16
@@ -247,6 +368,58 @@ class RaraLangParser ( Parser ):
                 self.match(RaraLangParser.ASSIGN)
                 self.state = 18
                 self.expr(0)
+                pass
+            elif token in [7]:
+                localctx = RaraLangParser.IfStmtContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
+                self.state = 19
+                self.match(RaraLangParser.IF)
+                self.state = 20
+                self.expr(0)
+                self.state = 21
+                self.match(RaraLangParser.THEN)
+                self.state = 22
+                self.stmt()
+                self.state = 25
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
+                if la_ == 1:
+                    self.state = 23
+                    self.match(RaraLangParser.ELSE)
+                    self.state = 24
+                    self.stmt()
+
+
+                pass
+            elif token in [10]:
+                localctx = RaraLangParser.WhileStmtContext(self, localctx)
+                self.enterOuterAlt(localctx, 4)
+                self.state = 27
+                self.match(RaraLangParser.WHILE)
+                self.state = 28
+                self.expr(0)
+                self.state = 29
+                self.match(RaraLangParser.DO)
+                self.state = 30
+                self.stmt()
+                pass
+            elif token in [1]:
+                localctx = RaraLangParser.BlockStmtContext(self, localctx)
+                self.enterOuterAlt(localctx, 5)
+                self.state = 32
+                self.match(RaraLangParser.T__0)
+                self.state = 36
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & 134218914) != 0):
+                    self.state = 33
+                    self.stmt()
+                    self.state = 38
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 39
+                self.match(RaraLangParser.T__1)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -348,6 +521,43 @@ class RaraLangParser ( Parser ):
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitParen" ):
                 return visitor.visitParen(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class CompareContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a RaraLangParser.ExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(RaraLangParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(RaraLangParser.ExprContext,i)
+
+        def EQ(self):
+            return self.getToken(RaraLangParser.EQ, 0)
+        def NEQ(self):
+            return self.getToken(RaraLangParser.NEQ, 0)
+        def LT(self):
+            return self.getToken(RaraLangParser.LT, 0)
+        def GT(self):
+            return self.getToken(RaraLangParser.GT, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCompare" ):
+                listener.enterCompare(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCompare" ):
+                listener.exitCompare(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCompare" ):
+                return visitor.visitCompare(self)
             else:
                 return visitor.visitChildren(self)
 
@@ -507,115 +717,134 @@ class RaraLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 32
+            self.state = 53
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [12]:
+            if token in [23]:
                 localctx = RaraLangParser.NegContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 22
+                self.state = 43
                 self.match(RaraLangParser.UNEG)
-                self.state = 23
+                self.state = 44
                 self.expr(6)
                 pass
-            elif token in [1]:
+            elif token in [3]:
                 localctx = RaraLangParser.ParenContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 24
-                self.match(RaraLangParser.T__0)
-                self.state = 25
+                self.state = 45
+                self.match(RaraLangParser.T__2)
+                self.state = 46
                 self.expr(0)
-                self.state = 26
-                self.match(RaraLangParser.T__1)
+                self.state = 47
+                self.match(RaraLangParser.T__3)
                 pass
-            elif token in [13]:
+            elif token in [24]:
                 localctx = RaraLangParser.IntContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 28
+                self.state = 49
                 self.match(RaraLangParser.INT)
                 pass
-            elif token in [14]:
+            elif token in [25]:
                 localctx = RaraLangParser.BasedContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 29
+                self.state = 50
                 self.match(RaraLangParser.BASED_NUMBER)
                 pass
-            elif token in [15]:
+            elif token in [26]:
                 localctx = RaraLangParser.StringContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 30
+                self.state = 51
                 self.match(RaraLangParser.STRING)
                 pass
-            elif token in [16]:
+            elif token in [27]:
                 localctx = RaraLangParser.VarContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 31
+                self.state = 52
                 self.match(RaraLangParser.ID)
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 42
+            self.state = 66
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 40
+                    self.state = 64
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
                     if la_ == 1:
                         localctx = RaraLangParser.MulDivContext(self, RaraLangParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 34
-                        if not self.precpred(self._ctx, 8):
+                        self.state = 55
+                        if not self.precpred(self._ctx, 9):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 35
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
+                        self.state = 56
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1920) != 0)):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3932160) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 36
-                        self.expr(9)
+                        self.state = 57
+                        self.expr(10)
                         pass
 
                     elif la_ == 2:
                         localctx = RaraLangParser.AddSubContext(self, RaraLangParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 37
-                        if not self.precpred(self._ctx, 7):
+                        self.state = 58
+                        if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 38
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
+                        self.state = 59
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 2144) != 0)):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4390912) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 39
+                        self.state = 60
+                        self.expr(9)
+                        pass
+
+                    elif la_ == 3:
+                        localctx = RaraLangParser.CompareContext(self, RaraLangParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 61
+                        if not self.precpred(self._ctx, 7):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
+                        self.state = 62
+                        localctx.op = self._input.LT(1)
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 61440) != 0)):
+                            localctx.op = self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
+                        self.state = 63
                         self.expr(8)
                         pass
 
              
-                self.state = 44
+                self.state = 68
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -639,10 +868,14 @@ class RaraLangParser ( Parser ):
 
     def expr_sempred(self, localctx:ExprContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 8)
+                return self.precpred(self._ctx, 9)
          
 
             if predIndex == 1:
+                return self.precpred(self._ctx, 8)
+         
+
+            if predIndex == 2:
                 return self.precpred(self._ctx, 7)
          
 

@@ -35,6 +35,33 @@ class RaraLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RaraLangParser#ifStmt.
+    def enterIfStmt(self, ctx:RaraLangParser.IfStmtContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#ifStmt.
+    def exitIfStmt(self, ctx:RaraLangParser.IfStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#whileStmt.
+    def enterWhileStmt(self, ctx:RaraLangParser.WhileStmtContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#whileStmt.
+    def exitWhileStmt(self, ctx:RaraLangParser.WhileStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#blockStmt.
+    def enterBlockStmt(self, ctx:RaraLangParser.BlockStmtContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#blockStmt.
+    def exitBlockStmt(self, ctx:RaraLangParser.BlockStmtContext):
+        pass
+
+
     # Enter a parse tree produced by RaraLangParser#neg.
     def enterNeg(self, ctx:RaraLangParser.NegContext):
         pass
@@ -59,6 +86,15 @@ class RaraLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by RaraLangParser#paren.
     def exitParen(self, ctx:RaraLangParser.ParenContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#compare.
+    def enterCompare(self, ctx:RaraLangParser.CompareContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#compare.
+    def exitCompare(self, ctx:RaraLangParser.CompareContext):
         pass
 
 

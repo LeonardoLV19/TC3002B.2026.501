@@ -24,6 +24,21 @@ class RaraLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by RaraLangParser#ifStmt.
+    def visitIfStmt(self, ctx:RaraLangParser.IfStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#whileStmt.
+    def visitWhileStmt(self, ctx:RaraLangParser.WhileStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#blockStmt.
+    def visitBlockStmt(self, ctx:RaraLangParser.BlockStmtContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by RaraLangParser#neg.
     def visitNeg(self, ctx:RaraLangParser.NegContext):
         return self.visitChildren(ctx)
@@ -36,6 +51,11 @@ class RaraLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RaraLangParser#paren.
     def visitParen(self, ctx:RaraLangParser.ParenContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#compare.
+    def visitCompare(self, ctx:RaraLangParser.CompareContext):
         return self.visitChildren(ctx)
 
 

@@ -1,0 +1,4 @@
+# While con condición inicialmente falsa — no imprime nada
+# Esperado: (nada)
+x <-- 10
+while x < 5 do print x

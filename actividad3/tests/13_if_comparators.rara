@@ -1,0 +1,6 @@
+# Los cuatro comparadores — imprime 1 cuando es verdadero
+# Esperado: 1, 1, 1, 1
+if 10 > 5 then print 1
+if 3 < 7 then print 1
+if 5 == 5 then print 1
+if 3 != 7 then print 1

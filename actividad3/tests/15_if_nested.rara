@@ -1,0 +1,8 @@
+# if anidado: el else pertenece al if más cercano
+# x=5 > 0: true → y=3 > 0: true → imprime x
+# Esperado: 5, 99
+x <-- 5
+y <-- 3
+if x > 0 then if y > 0 then print x
+else print 0
+if (x > 0) == 1 then print 99

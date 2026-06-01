@@ -1,0 +1,8 @@
+x <-- 7
+if x > 5 then
+  if x > 10 then
+    print 99
+  else
+    print 7
+else
+  print 0

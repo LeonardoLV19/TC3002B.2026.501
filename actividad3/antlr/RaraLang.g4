@@ -1,17 +1,21 @@
 grammar RaraLang;
 
-// RaraLang — Iteración 4: operadores Unicode ⊞ ⊠ ≈ ±
+// RaraLang — Iteración 6: while y bloques de sentencias
 
 prog : stmt* EOF ;
 
 stmt
-    : PRINT expr        #printStmt
-    | ID ASSIGN expr    #assignStmt
+    : PRINT expr                        #printStmt
+    | ID ASSIGN expr                    #assignStmt
+    | IF expr THEN stmt (ELSE stmt)?    #ifStmt
+    | WHILE expr DO stmt                #whileStmt
+    | '{' stmt* '}'                     #blockStmt
     ;
 
 expr
     : expr op=(TIMES | DIVIDE | MOD | DPLS) expr    #mulDiv
     | expr op=(PLUS  | MINUS  | AVG)        expr    #addSub
+    | expr op=(EQ | NEQ | LT | GT)          expr    #compare
     | UNEG expr                                      #neg
     | '(' expr ')'                                   #paren
     | INT                                            #int
@@ -24,6 +28,18 @@ expr
 
 PRINT  : 'print' ;
 ASSIGN : '<--' ;
+IF     : 'if' ;
+THEN   : 'then' ;
+ELSE   : 'else' ;
+WHILE  : 'while' ;
+DO     : 'do' ;
+
+// ─── Comparadores ─────────────────────────────────────────────────────────────
+
+EQ  : '==' ;
+NEQ : '!=' ;
+LT  : '<' ;
+GT  : '>' ;
 
 // ─── Operadores aritméticos ───────────────────────────────────────────────────
 
@@ -34,10 +50,10 @@ DIVIDE : '÷' ;
 
 // ─── Operadores Unicode ───────────────────────────────────────────────────────
 
-MOD  : '⊞' ;   // módulo (residuo)
-DPLS : '⊠' ;   // doble más: 2a + b
-AVG  : '≈' ;   // promedio entero: floor((a+b)/2)
-UNEG : '±' ;   // negación unaria: -x
+MOD  : '⊞' ;
+DPLS : '⊠' ;
+AVG  : '≈' ;
+UNEG : '±' ;
 
 // ─── Literales ────────────────────────────────────────────────────────────────
 

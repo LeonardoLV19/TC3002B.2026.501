@@ -1,0 +1,6 @@
+x <-- 1
+while x < 4 do {
+  if x == 2 then
+    print x
+  x <-- x + 1
+}

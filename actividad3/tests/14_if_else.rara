@@ -1,0 +1,10 @@
+# if/else — solo ejecuta una rama
+# x=8 > 5: imprime 10
+# y=2 < 5: imprime 0
+# Esperado: 10, 0
+x <-- 8
+if x > 5 then print 10
+else print 0
+y <-- 2
+if y > 5 then print 10
+else print 0
