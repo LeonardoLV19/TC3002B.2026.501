@@ -1,0 +1,6 @@
+# Reasignación: la segunda impresión debe mostrar el nuevo valor
+# Esperado: 5, 20
+a <-- 5
+print a
+a <-- 20
+print a

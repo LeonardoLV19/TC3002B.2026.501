@@ -1,0 +1,9 @@
+# Variable con nombre reservado en MIPS: add, sub, div
+# El prefijo _var_ en el label evita colisión
+# Esperado: 7, 4, 2
+add <-- 7
+sub <-- 4
+div <-- 2
+print add
+print sub
+print div
