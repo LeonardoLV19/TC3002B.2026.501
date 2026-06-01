@@ -35,6 +35,15 @@ class RaraLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RaraLangParser#neg.
+    def enterNeg(self, ctx:RaraLangParser.NegContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#neg.
+    def exitNeg(self, ctx:RaraLangParser.NegContext):
+        pass
+
+
     # Enter a parse tree produced by RaraLangParser#based.
     def enterBased(self, ctx:RaraLangParser.BasedContext):
         pass

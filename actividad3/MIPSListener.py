@@ -59,22 +59,20 @@ class MIPSListener(RaraLangListener):
         self._text.append(f"    lw {reg}, {label}")
         self._stack.append(("int", reg))
 
-    # ── expresiones: aritmética ───────────────────────────────────────────────
+    # ── expresiones: aritmética y operadores Unicode ──────────────────────────
 
     def exitMulDiv(self, ctx: RaraLangParser.MulDivContext):
         _, right = self._stack.pop()
         _, left  = self._stack.pop()
         op = ctx.op.text
         if op == '×':
-            self._text += [
-                f"    mult {left}, {right}",
-                f"    mflo {left}",
-            ]
-        else:  # ÷
-            self._text += [
-                f"    div {left}, {right}",
-                f"    mflo {left}",
-            ]
+            self._text += [f"    mult {left}, {right}", f"    mflo {left}"]
+        elif op == '÷':
+            self._text += [f"    div {left}, {right}",  f"    mflo {left}"]
+        elif op == '⊞':  # módulo: tomar el residuo con mfhi
+            self._text += [f"    div {left}, {right}",  f"    mfhi {left}"]
+        else:            # ⊠: 2a + b = sll(a,1) + b
+            self._text += [f"    sll {left}, {left}, 1", f"    add {left}, {left}, {right}"]
         self._stack.append(("int", left))
 
     def exitAddSub(self, ctx: RaraLangParser.AddSubContext):
@@ -83,9 +81,16 @@ class MIPSListener(RaraLangListener):
         op = ctx.op.text
         if op == '+':
             self._text.append(f"    add {left}, {left}, {right}")
-        else:  # -
+        elif op == '-':
             self._text.append(f"    sub {left}, {left}, {right}")
+        else:  # ≈: floor((a+b)/2) — sra da piso correcto para negativos
+            self._text += [f"    add {left}, {left}, {right}", f"    sra {left}, {left}, 1"]
         self._stack.append(("int", left))
+
+    def exitNeg(self, ctx: RaraLangParser.NegContext):
+        _, val = self._stack.pop()
+        self._text.append(f"    sub {val}, $zero, {val}")
+        self._stack.append(("int", val))
 
     # exitParen no hace nada: el resultado de la subexpresión ya está en la pila
 

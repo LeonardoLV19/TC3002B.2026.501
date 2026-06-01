@@ -24,6 +24,11 @@ class RaraLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by RaraLangParser#neg.
+    def visitNeg(self, ctx:RaraLangParser.NegContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by RaraLangParser#based.
     def visitBased(self, ctx:RaraLangParser.BasedContext):
         return self.visitChildren(ctx)

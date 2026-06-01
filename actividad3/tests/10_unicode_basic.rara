@@ -1,0 +1,9 @@
+# Los cuatro operadores Unicode con valores conocidos
+# 10 ⊞ 3  = 1      (10 mod 3)
+# 4  ⊠ 5  = 13     (2*4 + 5)
+# 7  ≈ 3  = 5      (floor((7+3)/2))
+# ±8      = -8
+print 10 ⊞ 3
+print 4 ⊠ 5
+print 7 ≈ 3
+print ±8

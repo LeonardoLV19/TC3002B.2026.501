@@ -1,6 +1,6 @@
 grammar RaraLang;
 
-// RaraLang — Iteración 3: aritmética básica con precedencia.
+// RaraLang — Iteración 4: operadores Unicode ⊞ ⊠ ≈ ±
 
 prog : stmt* EOF ;
 
@@ -10,13 +10,14 @@ stmt
     ;
 
 expr
-    : expr op=(TIMES | DIVIDE) expr    #mulDiv
-    | expr op=(PLUS  | MINUS)  expr    #addSub
-    | '(' expr ')'                     #paren
-    | INT                              #int
-    | BASED_NUMBER                     #based
-    | STRING                           #string
-    | ID                               #var
+    : expr op=(TIMES | DIVIDE | MOD | DPLS) expr    #mulDiv
+    | expr op=(PLUS  | MINUS  | AVG)        expr    #addSub
+    | UNEG expr                                      #neg
+    | '(' expr ')'                                   #paren
+    | INT                                            #int
+    | BASED_NUMBER                                   #based
+    | STRING                                         #string
+    | ID                                             #var
     ;
 
 // ─── Keywords ─────────────────────────────────────────────────────────────────
@@ -30,6 +31,13 @@ PLUS   : '+' ;
 MINUS  : '-' ;
 TIMES  : '×' ;
 DIVIDE : '÷' ;
+
+// ─── Operadores Unicode ───────────────────────────────────────────────────────
+
+MOD  : '⊞' ;   // módulo (residuo)
+DPLS : '⊠' ;   // doble más: 2a + b
+AVG  : '≈' ;   // promedio entero: floor((a+b)/2)
+UNEG : '±' ;   // negación unaria: -x
 
 // ─── Literales ────────────────────────────────────────────────────────────────
 
