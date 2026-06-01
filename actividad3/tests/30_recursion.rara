@@ -1,0 +1,4 @@
+func cuenta(x) {
+  return cuenta(x + 1)
+}
+print cuenta(1)

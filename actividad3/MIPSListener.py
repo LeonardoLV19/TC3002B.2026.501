@@ -29,6 +29,7 @@ class MIPSListener(RaraLangListener):
         self._vars      = {}
         self._frames    = []
         self._label_n   = 0
+        self._func_bufs = []   # [(name, [lines]), ...]
 
     # ── helpers ──────────────────────────────────────────────────────────────
 
@@ -194,6 +195,7 @@ class MIPSListener(RaraLangListener):
             RaraLangParser.IfStmtContext,
             RaraLangParser.WhileStmtContext,
             RaraLangParser.BlockStmtContext,
+            RaraLangParser.ReturnStmtContext,
         )
         if not isinstance(ctx, stmt_types):
             return
@@ -241,6 +243,54 @@ class MIPSListener(RaraLangListener):
             f"    syscall",
         ]
 
+    # ── funciones ─────────────────────────────────────────────────────────────
+
+    def enterFuncDecl(self, ctx: RaraLangParser.FuncDeclContext):
+        self._reg = 0
+        name = ctx.ID().getText()
+        buf = [f"{name}:"]
+        # almacenar argumentos en variables .data
+        if ctx.paramList():
+            for i, tok in enumerate(ctx.paramList().ID()):
+                label = self._var_label(tok.getText())
+                buf.append(f"    sw $a{i}, {label}")
+        self._buf_stack.append(self._text)
+        self._text = buf
+
+    def exitFuncDecl(self, ctx: RaraLangParser.FuncDeclContext):
+        self._text.append(f"    jr $ra")
+        self._func_bufs.append(self._text)
+        self._text = self._buf_stack.pop()
+        self._reg = 0
+
+    def enterReturnStmt(self, ctx: RaraLangParser.ReturnStmtContext):
+        self._reg = 0
+
+    def exitReturnStmt(self, ctx: RaraLangParser.ReturnStmtContext):
+        _, val = self._stack.pop()
+        self._text.append(f"    move $v0, {val}")
+        self._text.append(f"    jr $ra")
+
+    def exitCall(self, ctx: RaraLangParser.CallContext):
+        name = ctx.ID().getText()
+        nargs = len(ctx.argList().expr()) if ctx.argList() else 0
+        # pop args (stack: arg0 deepest, argN-1 on top) → reverse
+        args = [self._stack.pop()[1] for _ in range(nargs)]
+        args.reverse()
+        for i, reg in enumerate(args):
+            self._text.append(f"    move $a{i}, {reg}")
+        # guardar $ra antes del jal (bug de función-llama-función)
+        self._text += [
+            f"    addiu $sp, $sp, -4",
+            f"    sw $ra, 0($sp)",
+            f"    jal {name}",
+            f"    lw $ra, 0($sp)",
+            f"    addiu $sp, $sp, 4",
+        ]
+        result = self._reg_next()
+        self._text.append(f"    move {result}, $v0")
+        self._stack.append(("int", result))
+
     # ── salida ───────────────────────────────────────────────────────────────
 
     def output(self) -> str:
@@ -254,4 +304,7 @@ class MIPSListener(RaraLangListener):
         lines.extend(self._main_text)
         lines.append("    li $v0, 10")
         lines.append("    syscall")
+        for buf in self._func_bufs:
+            lines.append("")
+            lines.extend(buf)
         return "\n".join(lines) + "\n"

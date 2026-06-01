@@ -1,0 +1,6 @@
+# La misma función llamada dos veces — doble(3) → 6, doble(7) → 14
+func doble(x) {
+  return x + x
+}
+print doble(3)
+print doble(7)

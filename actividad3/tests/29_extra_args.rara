@@ -1,0 +1,4 @@
+func doble(x) {
+  return x + x
+}
+print doble(5, 99)

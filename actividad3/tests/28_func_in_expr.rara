@@ -1,0 +1,5 @@
+# Resultado de función en expresión aritmética — doble(3) + 1 → 7
+func doble(x) {
+  return x + x
+}
+print doble(3) + 1

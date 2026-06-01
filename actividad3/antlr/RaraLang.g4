@@ -1,8 +1,16 @@
 grammar RaraLang;
 
-// RaraLang — Iteración 6: while y bloques de sentencias
+// RaraLang — Iteración 7: funciones con parámetros
 
-prog : stmt* EOF ;
+prog : (funcDecl | stmt)* EOF ;
+
+funcDecl
+    : FUNC ID '(' paramList? ')' '{' stmt* '}'
+    ;
+
+paramList
+    : ID (',' ID)*
+    ;
 
 stmt
     : PRINT expr                        #printStmt
@@ -10,6 +18,7 @@ stmt
     | IF expr THEN stmt (ELSE stmt)?    #ifStmt
     | WHILE expr DO stmt                #whileStmt
     | '{' stmt* '}'                     #blockStmt
+    | RETURN expr                       #returnStmt
     ;
 
 expr
@@ -18,10 +27,15 @@ expr
     | expr op=(EQ | NEQ | LT | GT)          expr    #compare
     | UNEG expr                                      #neg
     | '(' expr ')'                                   #paren
+    | ID '(' argList? ')'                            #call
     | INT                                            #int
     | BASED_NUMBER                                   #based
     | STRING                                         #string
     | ID                                             #var
+    ;
+
+argList
+    : expr (',' expr)*
     ;
 
 // ─── Keywords ─────────────────────────────────────────────────────────────────
@@ -33,6 +47,8 @@ THEN   : 'then' ;
 ELSE   : 'else' ;
 WHILE  : 'while' ;
 DO     : 'do' ;
+FUNC   : 'func' ;
+RETURN : 'return' ;
 
 // ─── Comparadores ─────────────────────────────────────────────────────────────
 

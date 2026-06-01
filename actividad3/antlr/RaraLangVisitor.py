@@ -14,6 +14,16 @@ class RaraLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by RaraLangParser#funcDecl.
+    def visitFuncDecl(self, ctx:RaraLangParser.FuncDeclContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#paramList.
+    def visitParamList(self, ctx:RaraLangParser.ParamListContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by RaraLangParser#printStmt.
     def visitPrintStmt(self, ctx:RaraLangParser.PrintStmtContext):
         return self.visitChildren(ctx)
@@ -36,6 +46,16 @@ class RaraLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RaraLangParser#blockStmt.
     def visitBlockStmt(self, ctx:RaraLangParser.BlockStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#returnStmt.
+    def visitReturnStmt(self, ctx:RaraLangParser.ReturnStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#call.
+    def visitCall(self, ctx:RaraLangParser.CallContext):
         return self.visitChildren(ctx)
 
 
@@ -81,6 +101,11 @@ class RaraLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RaraLangParser#mulDiv.
     def visitMulDiv(self, ctx:RaraLangParser.MulDivContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RaraLangParser#argList.
+    def visitArgList(self, ctx:RaraLangParser.ArgListContext):
         return self.visitChildren(ctx)
 
 

@@ -17,6 +17,24 @@ class RaraLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RaraLangParser#funcDecl.
+    def enterFuncDecl(self, ctx:RaraLangParser.FuncDeclContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#funcDecl.
+    def exitFuncDecl(self, ctx:RaraLangParser.FuncDeclContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#paramList.
+    def enterParamList(self, ctx:RaraLangParser.ParamListContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#paramList.
+    def exitParamList(self, ctx:RaraLangParser.ParamListContext):
+        pass
+
+
     # Enter a parse tree produced by RaraLangParser#printStmt.
     def enterPrintStmt(self, ctx:RaraLangParser.PrintStmtContext):
         pass
@@ -59,6 +77,24 @@ class RaraLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by RaraLangParser#blockStmt.
     def exitBlockStmt(self, ctx:RaraLangParser.BlockStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#returnStmt.
+    def enterReturnStmt(self, ctx:RaraLangParser.ReturnStmtContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#returnStmt.
+    def exitReturnStmt(self, ctx:RaraLangParser.ReturnStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#call.
+    def enterCall(self, ctx:RaraLangParser.CallContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#call.
+    def exitCall(self, ctx:RaraLangParser.CallContext):
         pass
 
 
@@ -140,6 +176,15 @@ class RaraLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by RaraLangParser#mulDiv.
     def exitMulDiv(self, ctx:RaraLangParser.MulDivContext):
+        pass
+
+
+    # Enter a parse tree produced by RaraLangParser#argList.
+    def enterArgList(self, ctx:RaraLangParser.ArgListContext):
+        pass
+
+    # Exit a parse tree produced by RaraLangParser#argList.
+    def exitArgList(self, ctx:RaraLangParser.ArgListContext):
         pass
 
 

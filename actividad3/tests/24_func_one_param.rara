@@ -1,0 +1,5 @@
+# Función con un parámetro — doble(5) → 10
+func doble(x) {
+  return x + x
+}
+print doble(5)

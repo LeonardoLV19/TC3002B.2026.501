@@ -1,0 +1,9 @@
+# Función que llama a otra función — doble(5) → suma(5,5) → 10
+# Prueba el bug de $ra: sin save/restore, jr $ra en doble apuntaría a suma
+func suma(a, b) {
+  return a + b
+}
+func doble(x) {
+  return suma(x, x)
+}
+print doble(5)
