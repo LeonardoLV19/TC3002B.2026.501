@@ -1,0 +1,10 @@
+# Aritmética con variables y paréntesis anidados
+# x=10, y=3
+# Esperado: 13, 7, 30, 3, 24
+x <-- 10
+y <-- 3
+print x + y
+print x - y
+print x × y
+print x ÷ y
+print (x + 2) × (y - 1)

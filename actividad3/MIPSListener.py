@@ -7,7 +7,7 @@ class MIPSListener(RaraLangListener):
     def __init__(self):
         self._data = []      # líneas de la sección .data
         self._text = []      # líneas del cuerpo de main
-        self._stack = []     # pila: tuplas (tipo, valor)  tipo = "int" | "str"
+        self._stack = []     # pila: tuplas (tipo, registro)  tipo = "int" | "str"
         self._reg = 0        # contador de registros $t
         self._str_n = 0      # contador de etiquetas de string
         self._vars = {}      # nombre RaraLang → etiqueta MIPS
@@ -31,7 +31,7 @@ class MIPSListener(RaraLangListener):
             self._data.append(f"{label}: .word 0")
         return self._vars[name]
 
-    # ── expresiones ──────────────────────────────────────────────────────────
+    # ── expresiones: literales y variables ───────────────────────────────────
 
     def exitInt(self, ctx: RaraLangParser.IntContext):
         reg = self._reg_next()
@@ -59,7 +59,43 @@ class MIPSListener(RaraLangListener):
         self._text.append(f"    lw {reg}, {label}")
         self._stack.append(("int", reg))
 
+    # ── expresiones: aritmética ───────────────────────────────────────────────
+
+    def exitMulDiv(self, ctx: RaraLangParser.MulDivContext):
+        _, right = self._stack.pop()
+        _, left  = self._stack.pop()
+        op = ctx.op.text
+        if op == '×':
+            self._text += [
+                f"    mult {left}, {right}",
+                f"    mflo {left}",
+            ]
+        else:  # ÷
+            self._text += [
+                f"    div {left}, {right}",
+                f"    mflo {left}",
+            ]
+        self._stack.append(("int", left))
+
+    def exitAddSub(self, ctx: RaraLangParser.AddSubContext):
+        _, right = self._stack.pop()
+        _, left  = self._stack.pop()
+        op = ctx.op.text
+        if op == '+':
+            self._text.append(f"    add {left}, {left}, {right}")
+        else:  # -
+            self._text.append(f"    sub {left}, {left}, {right}")
+        self._stack.append(("int", left))
+
+    # exitParen no hace nada: el resultado de la subexpresión ya está en la pila
+
     # ── sentencias ───────────────────────────────────────────────────────────
+
+    def enterPrintStmt(self, ctx: RaraLangParser.PrintStmtContext):
+        self._reg = 0   # los $t son locales a cada sentencia
+
+    def enterAssignStmt(self, ctx: RaraLangParser.AssignStmtContext):
+        self._reg = 0   # los $t son locales a cada sentencia
 
     def exitAssignStmt(self, ctx: RaraLangParser.AssignStmtContext):
         kind, val = self._stack.pop()

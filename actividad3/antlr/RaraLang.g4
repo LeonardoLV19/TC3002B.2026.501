@@ -1,6 +1,6 @@
 grammar RaraLang;
 
-// RaraLang — Iteración 2: variables enteras y asignación.
+// RaraLang — Iteración 3: aritmética básica con precedencia.
 
 prog : stmt* EOF ;
 
@@ -10,16 +10,26 @@ stmt
     ;
 
 expr
-    : INT           #int
-    | BASED_NUMBER  #based
-    | STRING        #string
-    | ID            #var
+    : expr op=(TIMES | DIVIDE) expr    #mulDiv
+    | expr op=(PLUS  | MINUS)  expr    #addSub
+    | '(' expr ')'                     #paren
+    | INT                              #int
+    | BASED_NUMBER                     #based
+    | STRING                           #string
+    | ID                               #var
     ;
 
 // ─── Keywords ─────────────────────────────────────────────────────────────────
 
 PRINT  : 'print' ;
 ASSIGN : '<--' ;
+
+// ─── Operadores aritméticos ───────────────────────────────────────────────────
+
+PLUS   : '+' ;
+MINUS  : '-' ;
+TIMES  : '×' ;
+DIVIDE : '÷' ;
 
 // ─── Literales ────────────────────────────────────────────────────────────────
 
