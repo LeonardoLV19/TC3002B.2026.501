@@ -1,0 +1,5 @@
+# Strings y múltiples print
+# Esperado: tres líneas de texto
+print "hola mundo"
+print "RaraLang"
+print "iteracion 1"

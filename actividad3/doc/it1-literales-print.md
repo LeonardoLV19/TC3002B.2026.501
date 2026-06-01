@@ -76,12 +76,15 @@ Ajusta según lo que ya tengas. Úsalo como punto de partida, no copiar/pegar ci
 
 **¿Qué decidió el modelo sobre cómo guardar una cadena en memoria?**
 
-> _
+> _  El modelo guardó cada string en la sección .data. Cada letra se guardó como un código ASCII. Al final del string se pone un 0 para saber que ahí termina. Para imprimirlo SPIM busca en memoria y empieza a leer desde el primer ASCII hasta el último que se marcó con un 0.
 
 **`[FF:16]` y `255` deben imprimir lo mismo. ¿Lo hacen? ¿Por qué?**
 
-> _
+> _ Si si imprimen lo mismo. Porque el compilador convierte [FF:16] a decimal con int("FF", 16) = 255 en Python antes de generar el 
+.asm
 
 **¿Qué pasaría si escribes `[29:2]`? (el dígito 9 no existe en base 2 XD) ¿Lo probaste?**
 
-> _
+> _ Lo probé, no imprime nada y no me dio error. El compilador fallo silenciosamente. Me dio algo como una excepción
+     leonardo@MacBook-Pro-de-Leonardo-3 actividad3 % spim tests/04_invalid_base.asm 
+     Loaded: /opt/homebrew/Cellar/spim/9.1.24/share/exceptions.s

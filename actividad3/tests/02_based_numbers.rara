@@ -1,0 +1,7 @@
+# Números en otras bases
+# [FF:16]  → 255 en hex
+# [11111111:2] → 255 en binario
+# Ambos deben imprimir 255
+print [FF:16]
+print [11111111:2]
+print 255
